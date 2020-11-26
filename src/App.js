@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import libreria from "./libreria"
+import Cabecera from "./cabecera"
+import Main from "./main"
+import Footer from "./footer"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+    return (<>
+    <Cabecera nombre={libreria.usuario.nombre} imagen={libreria.usuario.imagen} vip={libreria.usuario.vip}/>
+    <Main libros={libreria.libros}/>
+    <Footer aleatorio={libreria.libros}/>
+    </>)
+ 
 }
 
 export default App;
